@@ -1,26 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 *{
-    padding: 0;
     margin: 0;
-    background-color: rgba(0, 0, 0, 0.447);
+    padding: 0;
+    box-sizing: border-box;
 }
-.container{
-    border: 2px solid rgba(255, 255, 255, 0.864);
-    padding: 20px;
-    width: 1000px;
+body{
+    background:#fff;
+}
+:root{
+    --main-color:#e3e8e4;
+    --primary-color:#363636;
+    --main-font:"Playfair Display", sans-serif;
+    --seconday-font:"Roboto", sans-serif;
+}
+.nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    font-family: serif;
+    padding: 10px;
+}
+ul li{
+    display: inline;
+    list-style: none;
+}
+ul li a{
+    text-decoration: none;
+    color: #000;
+    margin-left: 5rem;
+}
+ul li a:hover{
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+}
+.btn-fill{
+    padding: 10px 30px;
+    background: var(--primary-color);
+    border: none;
+    border-radius: 100px;
+    color: #fff;
+    cursor: pointer;
+}
+.btn-outline{
+    background: transparent;
+    border: none;
+    margin-left: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* header section starts  */
+
+header{
+    display: flex;
+    height: 100vh;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.content-container{
+    margin-left: 6rem;
+}
+.main-headings{
+    font-size: 4rem;
+    font-family: var(--main-font);
+    color: #0000004f;
+    margin-bottom: 2rem;
+}
+.main-headings span{
+    color: #000;
+}
+.primary-headings{
+    max-width: 500px;
+    font-family: serif;
+    line-height: 25px;
+    margin-bottom: 2rem;
+}
+
+.img-container,.img-container img{
+    width: 500px;
     height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border-radius: 100%;
 }
-.box{
-    width: 200px;
-    height: 50px;
-    border: 2px solid orange;
-    color: white;
-    margin: 10px 0px;
+
+
+/* Header Section ends  */
+
+
+/* Popularity Section Starts */
+.popularity{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* height: 100vh; */
+}
+.popularity div{
+    margin-right: 5rem;
+}
+.popularity div h1{
+    font-size: 3rem;
+    text-align: center;
+    color: #34343e;
+    font-family: var(--main-font);
+}
+.popularity div p{
+    color: #34343e;
+    font-family: serif;
+}
+/* Popularity Section Ends */
+
+/* Product Section Starts */
+/* .products-container{
+    height: 100vh;
+} */
+.products-heading{
+    text-align: center;
+    margin: 10rem auto 5rem auto;
+    font-size: 4rem;
+    color: #0000004f;
+
+}
+.products{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 80vh;
+}
+.product{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.product .product-img-layer{
+    background: var(--main-color);
+    padding: 20px;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+}
+.product .product-img-layer .img{
+    width: 200px;
+    height: 200px;
+}
+.product .product-img-layer .img-one{
+    background: url(images/chair1.png);
+    background-position: center;
+    background-size: cover;
+}
+.product .product-img-layer .img-two{
+    background: url(images/chair3.png);
+    background-position: center;
+    background-size: cover;
+}
+.product .product-img-layer .img-three{
+    background: url(images/chair4.png);
+    background-position: center;
+    background-size: cover;
+}
+.product-content{
+    background: var(--primary-color);
+    padding: 27px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: #fff;
+}
+.product-content .product-name{
+    font-family: sans-serif;
+    margin-bottom: 10px;
+}
+
+.b-container{
+    text-align: center;   
+}
+.b-container button{
+    border: none;
+    background: transparent;
+    font-size: 2rem;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+/* Product Section Ends */
 
 
+/* Why Choose Us Section Starts */
+.why-us{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 10rem;
+    height: 100vh;
+}
+.why-us .img-layer{
+    width: 400px;
+    height: 400px;
+    background: var(--main-color);
+    border-radius: 100%;
+}
+.why-us .img-layer .img{
+    background: url(images/chair5.png);
+    width: 400px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+.cards{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+}
+.card{
+    width: 200px;
+    height: 150px;
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 5px;
+}
+.card.card-fill{
+    background: #e3e8e490;
+    position: relative;
+}
+.card-fill .star{
+    width: 10px;
+    height: 10px;
+    padding: 15px;
+    border-radius: 100%;
+    background: var(--primary-color);
+    position: absolute;
+    top: -15px;
+    left: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    color: #fff;
+}
+.card h1{
+    color: #000;
+    font-family: sans-serif;
+    font-size: 17px;
+}
+.card p{
+    color: #999;
+    font-family: serif;
+    font-size: 12px;
+    margin-top: 20px;
+}
+/* Why Choose Us Section Ends */
+
+/* Features Section Starts  */
+.features{
+    margin-top: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+/* Features Section Ends  */
+
+/* Footer Styling Starts */
+footer{
+    background: var(--primary-color);
+    margin-top: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 100vh;
+    color: #fff;
+}
+footer .logo-container h1{
+    font-size: 4rem;
+    font-family: var(--main-font);
+    margin-bottom: 20px;
+}
+footer .logo-container p{
+    max-width: 400px;
+    font-family: serif;
+    line-height: 25px;
+}
+footer .about-company{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+footer .about-company .container{
+    margin-right: 40px;
+    margin-top: 20px;
+}
+.about-company .container h1{
+    margin-bottom: 50px;
+}
+.about-company .container p{
+    margin-bottom: 20px;
+    font-family: serif;
+}
+/* Footer Styling ends */
+
+
+/* Responsive */
+
+@media only screen and (max-width:1150px) {
+    .img-container{
+        width: 340px;
+        height: 340px;
+    }
+    .d-none{
+        display: none;
+    }
+}
+@media only screen and (max-width:768px) {
+    header{
+        height: 120vh;
+        text-align: center;
+        justify-content: center;
+    }
+    header .content-container{
+        margin-bottom: 6rem;
+        margin-top: 4rem;
+        margin-left: 0;
+    }
+    .popularity{
+        margin-top: 22rem;
+        text-align: center;
+    }
 }
